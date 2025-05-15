@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LMS Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    header {
+      background-color: #661212 ;
+      color: #ffd700;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+    .card p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    .card i {
+      font-size: 24px;
+      margin-right: 8px;
+      color: #3498db;
+    }
+    .search {
+      margin: 30px 0 10px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .search input {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 250px;
+    }
+    .student-list {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      max-height: 300px;
+      overflow-y: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .student-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .student-item:last-child {
+      border-bottom: none;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LMS 10 - B WICKRAMABAHU </h1>
+  </header>
+
+  <div class="container">
+    <div class="dashboard-grid">
+      <div class="card">
+        <h3><i class="ri-user-3-fill"></i>Total Students</h3>
+        <p id="total-students">45</p>
+      </div>
+      <div class="card">
+        <h3><i class="ri-checkbox-circle-fill"></i>Today's Attendance</h3>
+        <p id="present-count">42</p>
+      </div>
+      <div class="card">
+        <h3><i class="ri-close-circle-fill"></i>Today's Absentees</h3>
+        <p id="absent-count">3</p>
+      </div>
+      <div class="card">
+        <h3><i class="ri-user-star-fill"></i>Class Teacher Profile</h3>
+        <p>Name: Ms. Rupika Bandara</p>
+        <p>Subject: MATHS</p>
+        <p>Contact: ex@school.edu</p>
+      </div>
+      <div class="card">
+        <h3><i class="ri-calendar-event-fill"></i>Special Events</h3>
+        <p>Science Fair: May 20</p>
+        <p>Sports Day: June 3</p>
+      </div>
+      <div class="card">
+        <h3><i class="ri-book-2-fill"></i>Term Test Info</h3>
+        <p>DATE - MAY 15 </p>
+        <p> - </p>
+      </div>
+    </div>
+
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Search Student...">
+    </div>
+
+    <div class="student-list" id="studentList">
+      <div class="student-item">👤 Nimal Perera             s </div>
+      <div class="student-item">👤 Saman Silva</div>
+      <div class="student-item">👤 Kumari Gunasekara</div>
+      <div class="student-item">👤 Ruwan Fernando</div>
+      <div class="student-item">👤 Anjali Jayasooriya</div>
+      <div class="student-item">👤 Nimal Perera</div>
+      <div class="student-item">👤 Saman Silva</div>
+      <div class="student-item">👤 Kumari Gunasekara</div>
+      <div class="student-item">👤 Ruwan Fernando</div>
+      <div class="student-item">👤 Anjali Jayasooriya</div>
+       <div class="student-item">👤 Nimal Perera</div>
+      <div class="student-item">👤 Saman Silva</div>
+      <div class="student-item">👤 Kumari Gunasekara</div>
+      <div class="student-item">👤 Ruwan Fernando</div>
+      <div class="student-item">👤 Anjali Jayasooriya</div>
+       <div class="student-item">👤 Nimal Perera</div>
+      <div class="student-item">👤 Saman Silva</div>
+      <div class="student-item">👤 Kumari Gunasekara</div>
+      <div class="student-item">👤 Ruwan Fernando</div>
+      <div class="student-item">👤 Anjali Jayasooriya</div>
+       <div class="student-item">👤 Nimal Perera</div>
+      <div class="student-item">👤 Saman Silva</div>
+      <div class="student-item">👤 Kumari Gunasekara </div>
+      <div class="student-item">👤 Ruwan Fernando</div>
+      <div class="student-item">👤 Anjali Jayasooriya</div> 
+      <div class="student-item">👤 Nimal Perera</div>
+      <div class="student-item">👤 Saman Silva</div>
+      <div class="student-item">👤 Kumari Gunasekara</div>
+      <div class="student-item">👤 Ruwan Fernando</div>
+      <div class="student-item">👤 Anjali Jayasooriya</div>
+       <div class="student-item">👤 Nimal Perera</div>
+      <div class="student-item">👤 Saman Silva</div>
+      <div class="student-item">👤 Kumari Gunasekara</div>
+      <div class="student-item">👤 Ruwan Fernando</div>
+      <div class="student-item">👤 Anjali Jayasooriya</div>
+       <div class="student-item">👤 Nimal Perera</div>
+      <div class="student-item">👤 Saman Silva</div>
+      <div class="student-item">👤 Kumari Gunasekara</div>
+      <div class="student-item">👤 Ruwan Fernando</div>
+      <div class="student-item">👤 Anjali Jayasooriya</div>
+       <div class="student-item">👤 Nimal Perera</div>
+      <div class="student-item">👤 Saman Silva</div>
+      <div class="student-item">👤 Kumari Gunasekara</div>
+      <div class="student-item">👤 Ruwan Fernando</div>
+      <div class="student-item">👤 Anjali Jayasooriya</div>
+      
+    </div>
+  </div>
+  <h2 style="margin-top: 40px;">📚 Homework Assignments</h2>
+  <div style="overflow-x:auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    <table style="width: 100%; border-collapse: collapse; font-size: 16px;">
+      <thead>
+        <tr style="background-color: #3498db; color: white;">
+          <th style="padding: 12px; text-align: left;">Subject</th>
+          <th style="padding: 12px; text-align: left;">Title</th>
+          <th style="padding: 12px; text-align: left;">Description</th>
+          <th style="padding: 12px; text-align: left;">Due Date</th>
+          <th style="padding: 12px; text-align: left;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 12px;">Mathematics</td>
+          <td style="padding: 12px;">Algebra Worksheet</td>
+          <td style="padding: 12px;">Complete questions 1–10 from page 23</td>
+          <td style="padding: 12px;">2025-05-10</td>
+          <td style="padding: 12px; color: red;">Pending</td>
+        </tr>
+        <tr style="background-color: #f9f9f9;">
+          <td style="padding: 12px;">Science</td>
+          <td style="padding: 12px;">Plant Cells</td>
+          <td style="padding: 12px;">Draw and label a plant cell diagram</td>
+          <td style="padding: 12px;">2025-05-12</td>
+          <td style="padding: 12px; color: green;">Submitted</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px;">English</td>
+          <td style="padding: 12px;">Essay Writing</td>
+          <td style="padding: 12px;">Write an essay on "My Favorite Book"</td>
+          <td style="padding: 12px;">2025-05-11</td>
+          <td style="padding: 12px; color: red;">Pending</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <script>
+    // Live search for student names
+    const searchInput = document.getElementById('searchInput');
+    const studentList = document.getElementById('studentList');
+    searchInput.addEventListener('keyup', () => {
+      let filter = searchInput.value.toLowerCase();
+      let students = studentList.getElementsByClassName('student-item');
+      for (let i = 0; i < students.length; i++) {
+        let name = students[i].innerText.toLowerCase();
+        students[i].style.display = name.includes(filter) ? '' : 'none';
+      }
+    });
+
+    // Auto calculate absent count (just an example)
+    const total = 45;
+    const present = 42;
+    document.getElementById('total-students').textContent = total;
+    document.getElementById('present-count').textContent = present;
+    document.getElementById('absent-count').textContent = total - present;
+  </script>
+</body>
+</html>
